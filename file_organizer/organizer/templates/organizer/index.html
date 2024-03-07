@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Organizer</title>
+    <script src="https://cdn.jsdelivr.net/npm/pysimplegui@0.19.11/dist/PySimpleGUI.js"></script>
+</head>
+<body>
+    {% csrf_token %}
+    <script>
+        window.onload = function() {
+            document.getElementById('id_form').onsubmit = function() {
+                // Call PySimpleGUI function from JavaScript
+                PySimpleGUI.popup('File selection in progress...', title='Organizing', keep_on_top=True, non_blocking=True);
+                return true; // Allow form submission
+            };
+        };
+    </script>
+    </body>
+</html>
